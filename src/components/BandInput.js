@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class BandInput extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       text: '',
@@ -12,20 +12,21 @@ class BandInput extends Component {
   handleOnChange(event) {
     this.setState({
       text: event.target.value,
-    });
+    })
   }
 
   handleOnSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
     this.props.store.dispatch({
-      type: 'ADD_BAND', 
+      type: 'ADD_BAND',
       band: {
         text: this.state.text,
       },
-    });
+    })
+
     this.setState({
       text: '',
-    });
+    })
   }
 
   render() {
